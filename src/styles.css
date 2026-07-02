@@ -1,0 +1,265 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Light mode first — Clean Minimalist Theme (Google Antigravity style) */
+:root {
+  --radius: 0.5rem;
+
+  --background: oklch(1 0 0);
+  /* Pure White */
+  --foreground: oklch(0.25 0 0);
+  /* Dark Gray text */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.25 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.25 0 0);
+
+  --primary: oklch(0.75 0.15 240);
+  /* Baby Blue */
+  --primary-foreground: oklch(0.2 0 0);
+
+  --secondary: oklch(0.96 0 0);
+  --secondary-foreground: oklch(0.3 0 0);
+
+  --muted: oklch(0.96 0 0);
+  --muted-foreground: oklch(0.55 0 0);
+
+  --accent: oklch(0.96 0 0);
+  --accent-foreground: oklch(0.25 0 0);
+
+  --destructive: oklch(0.6 0.15 20);
+  /* Soft Red */
+  --destructive-foreground: oklch(1 0 0);
+
+  --success: oklch(0.65 0.15 150);
+  /* Soft Green */
+  --success-foreground: oklch(1 0 0);
+
+  --warning: oklch(0.75 0.15 70);
+  /* Soft Yellow/Orange */
+  --warning-foreground: oklch(0.25 0 0);
+
+  --border: oklch(0.92 0 0);
+  --input: oklch(0.92 0 0);
+  --ring: oklch(0.75 0.15 240);
+
+  --chart-1: oklch(0.75 0.15 240);
+  --chart-2: oklch(0.65 0.15 150);
+  --chart-3: oklch(0.75 0.15 70);
+  --chart-4: oklch(0.6 0.15 20);
+  --chart-5: oklch(0.7 0.1 300);
+
+  --sidebar: oklch(0.98 0 0);
+  /* Very light gray */
+  --sidebar-foreground: oklch(0.35 0 0);
+  --sidebar-primary: oklch(0.75 0.15 240);
+  --sidebar-primary-foreground: oklch(0.2 0 0);
+  --sidebar-accent: oklch(0.93 0 0);
+  --sidebar-accent-foreground: oklch(0.25 0 0);
+  --sidebar-border: oklch(0.92 0 0);
+  --sidebar-ring: oklch(0.75 0.15 240);
+
+  /* Fallbacks for removed gradients */
+  --gradient-primary: var(--primary);
+  --gradient-accent: var(--accent);
+  --gradient-surface: var(--background);
+
+  /* Clean drop shadows */
+  --shadow-glow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  --shadow-aurora: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-elegant: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.dark {
+  --background: oklch(0.15 0 0);
+  --foreground: oklch(0.98 0 0);
+  --card: oklch(0.15 0 0);
+  --card-foreground: oklch(0.98 0 0);
+  --popover: oklch(0.15 0 0);
+  --popover-foreground: oklch(0.98 0 0);
+  --primary: oklch(0.85 0.12 240);
+  /* Lighter Baby Blue for Dark Mode */
+  --primary-foreground: oklch(0.15 0 0);
+  --secondary: oklch(0.25 0 0);
+  --secondary-foreground: oklch(0.9 0 0);
+  --muted: oklch(0.22 0 0);
+  --muted-foreground: oklch(0.65 0 0);
+  --accent: oklch(0.25 0 0);
+  --accent-foreground: oklch(0.98 0 0);
+  --destructive: oklch(0.6 0.15 20);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.25 0 0);
+  --input: oklch(0.25 0 0);
+  --ring: oklch(0.85 0.12 240);
+
+  --sidebar: oklch(0.12 0 0);
+  --sidebar-foreground: oklch(0.8 0 0);
+  --sidebar-primary: oklch(0.85 0.12 240);
+  --sidebar-primary-foreground: oklch(0.15 0 0);
+  --sidebar-accent: oklch(0.2 0 0);
+  --sidebar-accent-foreground: oklch(0.98 0 0);
+  --sidebar-border: oklch(0.2 0 0);
+  --sidebar-ring: oklch(0.85 0.12 240);
+
+  --shadow-glow: 0 2px 10px rgba(0, 0, 0, 0.423);
+  --shadow-aurora: 0 4px 20px rgba(0, 0, 0, 0.252);
+  --shadow-elegant: 0 8px 30px rgba(0, 0, 0, 0.256);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html,
+  body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+  }
+}
+
+/* Graceful fallbacks for the removed glassmorphic effects */
+@utility bg-gradient-primary {
+  background-color: var(--color-primary);
+}
+
+@utility bg-gradient-accent {
+  background-color: var(--color-accent);
+}
+
+@utility bg-gradient-surface {
+  background-color: var(--color-background);
+}
+
+@utility shadow-glow {
+  box-shadow: var(--shadow-glow);
+}
+
+@utility shadow-aurora {
+  box-shadow: var(--shadow-aurora);
+}
+
+@utility shadow-elegant {
+  box-shadow: var(--shadow-elegant);
+}
+
+@utility text-gradient {
+  color: var(--color-primary);
+}
+
+@utility font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+@utility glass {
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+}
+
+/* Remove the visual impact of aurora blobs */
+@utility aurora-bg {
+  position: relative;
+  background-color: var(--color-background);
+}
+
+@utility aurora-blob-emerald {
+  display: none;
+}
+
+@utility aurora-blob-violet {
+  display: none;
+}
+
+@utility animate-aurora {
+  animation: none;
+}
+
+/* Nora Speech Soundwave Animations */
+@keyframes soundwave {
+
+  0%,
+  100% {
+    transform: scaleY(0.2);
+  }
+
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+@utility animate-soundwave-1 {
+  animation: soundwave 1s ease-in-out infinite;
+  transform-origin: bottom;
+}
+
+@utility animate-soundwave-2 {
+  animation: soundwave 0.8s ease-in-out infinite 0.15s;
+  transform-origin: bottom;
+}
+
+@utility animate-soundwave-3 {
+  animation: soundwave 1.2s ease-in-out infinite 0.3s;
+  transform-origin: bottom;
+}
+
+@utility animate-soundwave-4 {
+  animation: soundwave 0.9s ease-in-out infinite 0.05s;
+  transform-origin: bottom;
+}

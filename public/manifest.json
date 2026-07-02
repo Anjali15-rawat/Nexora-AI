@@ -1,0 +1,16 @@
+{
+  "name": "Nexora AI",
+  "short_name": "Nexora",
+  "description": "AI-Powered Growth Intelligence for E-Commerce",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a2e",
+  "theme_color": "#6d28d9",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
